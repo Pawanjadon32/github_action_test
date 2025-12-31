@@ -1,0 +1,12 @@
+name: "action_pipeline"
+
+on:
+  workflow_dispatch: 
+jobs:
+  terraform:
+    name: Terraform Init and Plan
+    runs-on: self-hosted   # 👈 Self-hosted runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
